@@ -4,7 +4,8 @@ import React from "react";
 import styled from "styled-components";
 import { mobile } from "../Responsive";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../redux/apiCalls";
 
 const Container = styled.div`
   height: 60px;
@@ -76,6 +77,13 @@ const MenuItem = styled.div`
 
 const Navbar = () => {
   const quantity = useSelector((state) => state.cart.quantity);
+  const user = useSelector((state) => state.user.currentUser);
+  const dispatch = useDispatch();
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    logout(dispatch);
+  };
   return (
     <Container>
       <Wrapper>
@@ -93,8 +101,12 @@ const Navbar = () => {
           <Link to="/register" style={{ textDecoration: "none" }}>
             <MenuItem>REGISTER</MenuItem>
           </Link>
-          <Link to="/login" style={{ textDecoration: "none" }}>
-            <MenuItem>LOGIN</MenuItem>
+          <Link
+            to="/login"
+            style={{ textDecoration: "none" }}
+            onClick={handleLogout}
+          >
+            <MenuItem>{user && "LOGOUT"}</MenuItem>
           </Link>
           <Link to="/cart">
             <MenuItem>

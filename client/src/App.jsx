@@ -16,7 +16,7 @@ import Success from "./pages/Success";
 import { useSelector } from "react-redux";
 
 export default function App() {
-  const user = useSelector(state => state.user.currentUser)
+  const user = useSelector((state) => state.user.currentUser);
   return (
     <div className="app">
       <Router>
@@ -35,7 +35,7 @@ export default function App() {
           </Route>
           <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
           <Route path="/register">
-            {user ? <Redirect to="/" /> : <Register />}
+            <Register />
           </Route>
           <Route path="/pay">
             <Pay />
@@ -46,6 +46,6 @@ export default function App() {
         </Switch>
       </Router>
     </div>
-// Comment
+    // Comment
   );
 }
