@@ -101,12 +101,10 @@ const Navbar = () => {
           <Link to="/register" style={{ textDecoration: "none" }}>
             <MenuItem>REGISTER</MenuItem>
           </Link>
-          <Link
-            to="/login"
-            style={{ textDecoration: "none" }}
-            onClick={handleLogout}
-          >
-            <MenuItem>{user && "LOGOUT"}</MenuItem>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <MenuItem onClick={handleLogout}>
+              {user ? "LOGOUT" : "LOGIN"}
+            </MenuItem>
           </Link>
           <Link to="/cart">
             <MenuItem>

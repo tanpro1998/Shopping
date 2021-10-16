@@ -50,11 +50,11 @@ router.get("/find/:id", verifyTokenAdmin, async (req, res) => {
 });
 
 // Get All
-router.get("/", async (req, res) => {
+router.get("/", verifyTokenAdmin, async (req, res) => {
   const query = req.query.new;
   try {
     const users = query
-      ? await (await User.find().sort({ _id: -1 }).limit(5)).reverse()
+      ? await User.find().sort({ _id: -1 }).limit(5).reverse()
       : await User.find();
     res.status(200).json(users);
   } catch (err) {
@@ -81,7 +81,7 @@ router.get("/stats", async (req, res) => {
         },
       },
     ]);
-    res.status(200).json(data)
+    res.status(200).json(data);
   } catch (err) {
     res.status(500).json(err);
   }

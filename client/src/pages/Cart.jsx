@@ -173,6 +173,7 @@ const Button = styled.button`
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
+  const quantity = useSelector((state) => state.cart.quantity);
   const [stripeToken, setStripeToken] = useState(null);
   const history = useHistory();
 
@@ -205,7 +206,7 @@ const Cart = () => {
             </TopButton>
           </Link>
           <TopText>
-            <Text>Shopping Bag (4)</Text>
+            <Text>Shopping Bag ({quantity})</Text>
             <Text>Your Wishlist (2)</Text>
           </TopText>
           <TopButton bgColor="black" color="white">

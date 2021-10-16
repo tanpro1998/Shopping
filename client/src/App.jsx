@@ -35,7 +35,7 @@ export default function App() {
           </Route>
           <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
           <Route path="/register">
-            <Register />
+            {user ? <Redirect to="/" /> : <Register />}
           </Route>
           <Route path="/pay">
             <Pay />
