@@ -1,5 +1,8 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../Responsive";
+import { register } from "../redux/apiCalls";
+import { useDispatch } from "react-redux";
 
 const Container = styled.div`
   width: 100vw;
@@ -64,15 +67,43 @@ const Button = styled.button`
 `;
 
 const Register = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    register(dispatch, { username, email, password, confirmPassword });
+  };
   return (
     <Container>
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
-        <Form>
-          <Input placeholder="username" required />
-          <Input placeholder="email" required />
-          <Input type="password" placeholder="password" required />
-          <Input type="password" placeholder="confirm password" required />
+        <Form onSubmit={handleSubmit}>
+          <Input
+            placeholder="username"
+            required
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <Input
+            placeholder="email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <Input
+            type="password"
+            placeholder="password"
+            required
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Input
+            type="password"
+            placeholder="confirm password"
+            required
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
           <Agree>
             By creating an account, i agree to the processing of my personal
             data in accordance with me <b>PRIVACY POLICY</b>

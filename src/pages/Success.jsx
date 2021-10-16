@@ -31,6 +31,13 @@ const SubTitle = styled.p`
   text-align: center;
 `;
 
+const Back = styled.a`
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  cursor: pointer;
+`;
+
 const Success = () => {
   const location = useLocation();
   console.log(location);
@@ -41,6 +48,7 @@ const Success = () => {
       <SubTitle>
         Your order is being prepared. Thanks for choosing Flash Shop.
       </SubTitle>
+      <Back href="/">Return Home Page</Back>
     </Container>
   );
 };

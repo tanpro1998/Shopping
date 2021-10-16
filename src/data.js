@@ -1,21 +1,21 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://i.ibb.co/DG69bQ4/2.png",
+    img: "https://wiki.tino.org/wp-content/uploads/2021/06/h1-5.jpg",
     title: "SUMMER SALE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "f5fafd",
   },
   {
     id: 2,
-    img: "https://i.ibb.co/DG69bQ4/2.png",
+    img: "https://englishtown.edu.vn/wp-content/uploads/2019/03/tu-vung-tieng-anh-mua-sam.jpg",
     title: "AUTUMN COLLECTION",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fcf1ed",
   },
   {
     id: 3,
-    img: "https://i.ibb.co/cXFnLLV/3.png",
+    img: "https://www.luton-airport-guide.co.uk/content/uploads/2020/09/luton-shopping.jpg",
     title: "LOUNGEWEAR LOVE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fbf0f4",
@@ -24,19 +24,19 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: "https://cdn.shopify.com/s/files/1/0021/0970/2202/products/cobb-blue-shirt-collar-slim-fit-casual-shirt-463110_2048x2048.jpg?v=1630495775",
     title: "SHIRT STYLE!",
     cat: "women"
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: "https://asset1.cxnmarksandspencer.com/is/image/mands/1229_20210402_LF_WW_LOUNGEWEAR_BSLH-8188_1?$editorial_780x780$",
     title: "LOUNGEWEAR LOVE",
     cat: "coat"
   },
   {
     id: 3,
-    img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    img: "http://picture-cdn.wheretoget.it/0vxzth-l-610x610-jacket-black-black+jacket-leather-leather+jacket-fashion-girly-girl-hat-outfit-style.jpg",
     title: "LIGHT JACKETS",
     cat: "jeans"
   },
