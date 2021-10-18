@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "heroku-postbuild": "cd client && yarn build"
+    "start": "node index.js",
+    "build": "cd client/ && yarn install && yarn build"
   },
   "author": "",
   "license": "ISC",
