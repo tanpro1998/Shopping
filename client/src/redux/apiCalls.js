@@ -1,4 +1,4 @@
-import { publicRequest } from "../request";
+import { publicRequest } from "../config";
 import {
   loginFail,
   loginStart,

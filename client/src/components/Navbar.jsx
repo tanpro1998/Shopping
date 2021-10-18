@@ -95,7 +95,9 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>FLASH.</Logo>
+          <Link to="/" style={{ cursor: "pointer", textDecoration: "none" }}>
+            <Logo>FLASH.</Logo>
+          </Link>
         </Center>
         <Right>
           <Link to="/register" style={{ textDecoration: "none" }}>

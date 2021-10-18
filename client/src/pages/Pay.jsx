@@ -3,6 +3,7 @@ import StripeCheckout from "react-stripe-checkout";
 import styled from "styled-components";
 import { useHistory } from "react-router";
 import { axiosInstance } from "../config";
+import axios from "axios";
 
 const KEY =
   "pk_test_51JbgRzDrivpegEIzT1BfYsVfvpHhAreHjUGrTfxP2YE2HSpBnaxHFNJyCXvNlhYt9d3cb1Lb3wkLDN426ojSQi9v00l9qgE4oX";

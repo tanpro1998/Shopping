@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "heroku-postbuild": "cd client && yarn build"
   },
   "author": "",
@@ -21,6 +21,7 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.3",
     "nodemon": "^2.0.12",
+    "path": "^0.12.7",
     "stripe": "^8.176.0"
   }
 }

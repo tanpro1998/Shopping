@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = "https://sh0pp1ng.herokuapp.com/api/";
+const BASE_URL = "https://flashshopping.herokuapp.com/api/";
 const TOKEN = JSON.parse(JSON.parse(localStorage.getItem("persist:root"))?.user)
   .currentUser.accessToken;
 
